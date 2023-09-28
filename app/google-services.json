@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "841231619363",
+    "project_id": "epileptic-seizure-detection",
+    "storage_bucket": "epileptic-seizure-detection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841231619363:android:1a6e012f85f6809daca896",
+        "android_client_info": {
+          "package_name": "com.example.epilepticseizuredetection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841231619363-q0oask8hvddfq6vheleglt9t1n58mpvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.epilepticseizuredetection",
+            "certificate_hash": "d309137202def879b916f183741576e8001e8638"
+          }
+        },
+        {
+          "client_id": "841231619363-v42nbht3pu0s6m5d86t0l680jg0q70n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYVYN1q0bQD9xPxNXO3JEykL3hfMHpa8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841231619363-v42nbht3pu0s6m5d86t0l680jg0q70n5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
