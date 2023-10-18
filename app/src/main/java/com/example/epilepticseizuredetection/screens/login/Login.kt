@@ -23,21 +23,34 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.epilepticseizuredetection.R
+import com.example.epilepticseizuredetection.presentation.viewModels.LoginViewModel
+import com.example.epilepticseizuredetection.data.login
 import com.example.epilepticseizuredetection.screens.DodgerBlue
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
-fun LoginPage(navController : NavController) {
+fun LoginPage(navController : NavController,  viewModel: LoginViewModel) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
+    val auth = Firebase.auth
+
+    val currentUser = auth.currentUser
+    currentUser?.reload()
+
+    val context = LocalContext.current
+
+    val uiState by viewModel.uiState
 
 
     Column(
@@ -81,7 +94,7 @@ fun LoginPage(navController : NavController) {
 
         Button(
             onClick = {
-                navController.navigate("home_page")
+                login(email, password, navController, context )
 
             },
             colors = ButtonDefaults.buttonColors(

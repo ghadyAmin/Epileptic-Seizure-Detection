@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.epilepticseizuredetection.presentation.viewModels.LoginViewModel
+import com.example.epilepticseizuredetection.presentation.viewModels.RegistrationViewModel
 import com.example.epilepticseizuredetection.screens.analytics.DataScreen
 import com.example.epilepticseizuredetection.screens.homePage.HomeScreen
 import com.example.epilepticseizuredetection.screens.login.LoginPage
@@ -16,13 +18,13 @@ fun Navigation(){
 
     NavHost(navController = navController, startDestination = "login") {
         composable("login") {
-            LoginPage(navController)
+            LoginPage(navController, LoginViewModel())
 
 
         }
         composable("registration") {
 
-            RegistrationScreen(navController)
+            RegistrationScreen(navController, RegistrationViewModel())
 
     }
 

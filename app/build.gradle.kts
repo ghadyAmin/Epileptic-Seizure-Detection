@@ -83,4 +83,12 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
 
 
+
+    val lifecycle_version = "2.6.1"
+    // ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+
+
+
+
 }

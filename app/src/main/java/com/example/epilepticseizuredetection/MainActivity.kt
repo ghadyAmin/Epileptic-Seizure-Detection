@@ -56,6 +56,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                    //LoginPage(navController = navController)
                    // RegistrationScreen()
+
                     Navigation()
                 }
             }
