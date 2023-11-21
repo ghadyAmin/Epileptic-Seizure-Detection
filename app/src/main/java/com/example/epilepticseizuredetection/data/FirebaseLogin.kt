@@ -22,7 +22,7 @@ fun login (email: String, password: String, navController : NavController, conte
             .addOnCompleteListener {
                 Log.d(ContentValues.TAG, "Inside _OnCompleteListener")
                 Log.d(ContentValues.TAG, "isSuccessful = ${it.isSuccessful}")
-
+                if (it.isSuccessful) { navController.navigate("home_page") }
 
             }.addOnFailureListener {
                 Log.d(ContentValues.TAG, "Inside_OnFailureListener")

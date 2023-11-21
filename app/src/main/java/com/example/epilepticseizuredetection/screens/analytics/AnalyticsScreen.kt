@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.BottomAppBar
@@ -55,6 +56,23 @@ fun DataScreen(navController: NavController){
                     )
                     },  label = { Text(text = "data") }
                 )
+
+                NavigationBarItem(
+                    selected = false,
+                    onClick = {  navController.navigate("account_screen"){
+                        //navigation builder
+                        popUpTo(navController.graph.findStartDestination().id)
+                        launchSingleTop = true
+                    } },
+                    icon = { Icon(
+                        imageVector = Icons.Filled.AccountCircle,
+                        contentDescription = "account"
+                    )
+                    },  label = { Text(text = "account") }
+                )
+
+
+
 
             }
         }
